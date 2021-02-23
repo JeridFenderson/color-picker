@@ -36,6 +36,8 @@ export class App extends Component {
   }
 
   render() {
+    const { hue, saturation, lightness, alpha } = this.state
+
     return (
       <div>
         <header>
@@ -43,16 +45,16 @@ export class App extends Component {
         </header>
         <main>
           <ColorDisplay
-            hue={this.state.hue}
-            saturation={this.state.saturation}
-            lightness={this.state.lightness}
-            alpha={this.state.alpha}
+            hue={hue}
+            saturation={saturation}
+            lightness={lightness}
+            alpha={alpha}
           />
           <ColorSelector
-            hue={this.state.hue}
-            saturation={this.state.saturation}
-            lightness={this.state.lightness}
-            alpha={this.state.alpha}
+            hue={hue}
+            saturation={saturation}
+            lightness={lightness}
+            alpha={alpha}
             changeHSL={this.changeHSL}
           />
         </main>

@@ -2,22 +2,23 @@ import React, { Component } from 'react'
 
 export class ColorDisplay extends Component {
   render() {
+    const { hue, saturation, lightness, alpha } = this.props
     return (
       <figure>
         <div
           className="box"
           style={{
-            backgroundColor: `hsla(${this.props.hue},
-                 ${this.props.saturation}%,
-                 ${this.props.lightness}%,
-                 ${this.props.alpha})`,
+            backgroundColor: `hsla(${hue},
+                 ${saturation}%,
+                 ${lightness}%,
+                 ${alpha})`,
           }}
         >
           <h2
             style={{
-              color: `hsl(${this.props.hue},
-               ${this.props.saturation}%,
-               ${this.props.lightness}%)`,
+              color: `hsl(${hue},
+               ${saturation}%,
+               ${lightness}%)`,
             }}
           >
             Sometimes the things that you're searching for has been in front of
